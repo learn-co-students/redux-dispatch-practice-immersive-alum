@@ -22,8 +22,14 @@ export function managePets(state = {pets: []}, action){
 
 export function dispatch(action){
   state = managePets(state, action)
+  render()
 }
 
 export function render(){
-
+  let container = document.getElementById('container')
+  const eachName = state.pets.map((eachObject) => {
+    return `<li>${eachObject.name}</li>`
+  }).join('')
+  console.log('eachName is: ', eachName)
+  container.innerHTML = `<ul>${eachName}</ul>`
 }
