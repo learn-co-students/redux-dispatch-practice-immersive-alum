@@ -20,7 +20,8 @@ export function managePets(state = {pets: []}, action){
   }
 }
 
-export function dispatch(){
+export function dispatch(action){
+  state = managePets(state, action)
 }
 
 export function render(){
