@@ -1,7 +1,11 @@
 export let state;
 
 
-export function managePets(){
+export function managePets(state, action){
+  switch(action.type) {
+    default:
+    return state
+  }
 }
 
 export function dispatch(){
